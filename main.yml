@@ -1,4 +1,6 @@
-- hosts: jenkins
+---
+- name: Jenkins Role
+  hosts: localhost
   become: true
   
   vars:
@@ -7,5 +9,4 @@
       - openjdk-8-jdk
 
   roles:
-    - role: geerlingguy.java
-    - role: geerlingguy.jenkins
+    - jenkins
